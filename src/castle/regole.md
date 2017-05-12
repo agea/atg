@@ -62,7 +62,7 @@ Cavaliere
   - Attacchi per partita: 5
   - Attacchi per turno: 1
 
-- Balestra:
+- Spada:
   - Distanza massima: 0
   - Attacco: 1D6
   - Attacchi per partita: illimitato
