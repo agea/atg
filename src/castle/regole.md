@@ -1,6 +1,5 @@
 ATG Castle
 ==========
-
 Occorrente: 1 dado a 6 facce, tabellone castello, personaggi drago e cavalieri
 
 Si gioca in due, un giocatore gioca non i cavalieri, l'altro con in drago
@@ -9,7 +8,6 @@ I personaggi possono muoversi nel tabellone orizzontalmente o verticalmente. Non
 
 Svolgimento del turno 
 ----------------------
-
 Inizia il giocatore con i cavalieri. 
 
 Il giocatore tira un dado, il risultato indica di quante caselle si può muovere al massimo ciascun personaggio. 
@@ -22,7 +20,6 @@ A questo punto è il turno dell'avversario
 
 Drago
 -----
-
 #### Punti ferita: 8
 #### Movimento: 1D6
 #### Difesa: 4
@@ -48,7 +45,6 @@ Drago
 
 Cavaliere
 ---------
-
 #### Punti ferita: 1
 #### Movimento: 1D6
 #### Difesa: 2
