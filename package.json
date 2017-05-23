@@ -1,0 +1,20 @@
+{
+  "name": "atg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "football-it": "markdown-pdf -s print.css -b 1cm -f A4 -c football -o pdf/football-it.pdf football/rules-it.md",
+    "castle-it": "markdown-pdf -s print.css -b 1cm -f A4 -c castle -o pdf/castle-it.pdf castle/rules-it.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agea/atg.git"
+  },
+  "author": "agea <agea@drwolf.it>",
+  "license": "MIT",
+  "homepage": "https://github.com/agea/atg#readme",
+  "dependencies": {
+    "markdown-pdf": "^7.0.0"
+  }
+}

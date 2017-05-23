@@ -1,0 +1,93 @@
+<html>
+
+<head>
+  <title>ATG - Agili Tabletop Games</title>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/marked.min.js"></script>
+  <style>
+    html {
+      background: #ddd;
+    }
+
+    body {
+      background: white;
+      width: 210mm;
+      margin: auto;
+      text-align: justify;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    #rules, #menu{
+      padding: 10mm;
+    }
+
+    #images img {
+      display: block;
+      page-break-inside: avoid;
+      width: 100%;
+    }
+
+    @page {
+      size: A4;
+    }
+
+    @media print {
+      #menu{
+        display: none;
+      }
+    }
+  </style>
+  <script>
+    var config = {
+      football: {
+        rules: 'regole.md',
+        img: [
+          { name: 'Tabellone', value: 'img/football-field.svg' },
+          { name: 'Segnalini', value: 'img/football-tiles.svg' },
+          { name: 'Squadre', value: 'img/teams_it.svg' }
+        ]
+      },
+      castle: {
+        rules: 'regole.md',
+        img: [
+          { name: 'Tabellone', value: 'img/castle-back.svg' },
+          { name: 'Pedine', value: 'img/castle-tiles.svg' }
+        ]
+      }
+    };
+
+
+    function reload() {
+      setTimeout(function () {
+        var name = window.location.hash.substring(1);
+        var game = config[name];
+        $.get(name + '/' + game.rules, function (data) {
+          $('#rules').html(marked(data));
+          $img = $('#images');
+          $img.html('');
+          for (var i in game.img) {
+            $img.append($('<img src="' + name + '/' + game.img[i].value + '">'));
+          }
+        });
+      }, 0);
+    }
+    $(document).ready(function () {
+      reload();
+    });
+  </script>
+</head>
+
+<body>
+  <div id="menu">
+    <h1>Agili Tabletop Games</h1>
+    <ul>
+      <li><a href="#football" onclick="reload()">Football</a></li>
+      <li><a href="#castle" onclick="reload()">Castle</a></li>
+    </ul>
+  </div>
+
+  <div id="rules"></div>
+  <div id="images"></div>
+</body>
+
+</html>

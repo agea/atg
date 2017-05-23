@@ -67,3 +67,6 @@ Cavaliere
   - Attacco: 1D6
   - Attacchi per partita: illimitato
   - Attacchi per turno: 1
+
+![](img/castle-back.svg)
+![](img/castle-tiles.svg)
